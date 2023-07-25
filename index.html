@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="menu-container">
+        <h1>项目清单</h1>
+    </div>
+
+    <script>
+        const data = [
+            {
+                title: 'Bootstrap 案例',
+                children: [
+                    {
+                        url: './bootstrap-demo/index.html',
+                        title: '星巴克案例'
+                    }
+                ]
+            },
+            {
+                title: 'HTML + CSS 案例',
+                children: [
+                    {
+                        url: './html-css-case/index.html',
+                        title: 'HTML + CSS 案例'
+                    }
+                ]
+            },
+            {
+                title: 'JavaScript 案例',
+                children: [
+                    {
+                        url: './javascript-case/accordion',
+                        title: '手风琴效果'
+                    },
+                    {
+                        url: './javascript-case/countdown',
+                        title: '倒计时效果'
+                    },
+                    {
+                        url: './javascript-case/dynamic-sort-table',
+                        title: '动态排序表格效果'
+                    },
+                    {
+                        url: './javascript-case/five-in-five/html',
+                        title: '五子棋游戏'
+                    },
+                    {
+                        url: './javascript-case/form-plugin',
+                        title: '通用表单'
+                    },
+                    {
+                        url: './javascript-case/heartbeat',
+                        title: '心跳效果'
+                    },
+                    {
+                        url: './javascript-case/image-drag-verification/html',
+                        title: '图片拖动验证'
+                    },
+                    {
+                        url: './javascript-case/king-of-glory-hero-query',
+                        title: '王者荣耀英雄查询'
+                    },
+                    {
+                        url: './javascript-case/linkage-between-provinces-and-cities',
+                        title: '省市联动效果'
+                    },
+                    {
+                        url: './javascript-case/lyric-roll',
+                        title: '歌词滚动效果'
+                    },
+                    {
+                        url: './javascript-case/mind-reading',
+                        title: '读心术游戏'
+                    },
+                    {
+                        url: './javascript-case/paging-plug-in',
+                        title: '分页效果'
+                    },
+                    {
+                        url: './javascript-case/picture-magnifier',
+                        title: '图片放大镜'
+                    },
+                    {
+                        url: './javascript-case/picture-waterfall-flow',
+                        title: '图片瀑布流'
+                    },
+                    {
+                        url: './javascript-case/pixel-bird',
+                        title: '像素鸟小游戏'
+                    },
+                    {
+                        url: './javascript-case/points-draw',
+                        title: '随机抽奖效果'
+                    },
+                    {
+                        url: './javascript-case/scroll-text',
+                        title: '文字滚动效果'
+                    },
+                    {
+                        url: './javascript-case/seamless-wheel-casting',
+                        title: '无缝轮播图'
+                    },
+                    {
+                        url: './javascript-case/shopping-cart',
+                        title: '购物车'
+                    },
+                    {
+                        url: './javascript-case/tencent-video-recommendation',
+                        title: '腾讯视频首页推荐'
+                    },
+                    {
+                        url: './javascript-case/three-stage-linkage',
+                        title: '省市三级联动效果'
+                    },
+                ]
+            },
+            {
+                title: '移动端布局',
+                children: [
+                    {
+                        url: './mobile-layout/rem',
+                        title: 'rem 布局案例'
+                    },
+                    {
+                        url: './mobile-layout/vw',
+                        title: 'vw 布局案例'
+                    }
+                ]
+            },
+            {
+                title: '网络案例',
+                children: [
+                    {
+                        url: './network/chatbot',
+                        title: '聊天机器人案例'
+                    }
+                ]
+            },
+            {
+                title: 'Vue3 案例',
+                children: [
+                    {
+                        url: './vue/vue3',
+                        title: 'todo-list'
+                    }
+                ]
+            },
+            {
+                title: 'Web App 案例',
+                children: [
+                    {
+                        url: './web-app/maoyan-film/html',
+                        title: '猫眼电影案例'
+                    }
+                ]
+            },
+        ]
+        const container = document.querySelector('.menu-container');
+
+        data.map(item => {
+            const div = document.createElement('div');
+            div.className = 'menu';
+            const h2 = document.createElement('h2');
+            h2.innerText = item.title;
+            div.appendChild(h2);
+            if (item.children) {
+                const ul = document.createElement('ul');
+                ul.className = 'submenu';
+                item.children.forEach(item => {
+                    ul.innerHTML += `<li><a href=${item.url} target="_blank">${item.title}</a></li>`;
+                })
+                div.appendChild(ul);
+            }
+            container.appendChild(div);
+        })
+    </script>
+    <script src="./animate.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

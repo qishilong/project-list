@@ -1,0 +1,50 @@
+.menu-container {
+  margin: 0 auto;
+  width: 600px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.menu {
+  margin: 20px 0;
+}
+
+h2 {
+  background-color: #F0F0F0;
+  border: 1px solid #E0E0E0;
+  cursor: pointer;
+  color: #666;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 0px 10px;
+}
+
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0px 0px 0px 30px;
+  height: 0px;
+  overflow: hidden;
+}
+
+.submenu li {
+  height: 30px;
+  line-height: 30px;
+  padding: 10px 0px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  font-size: 18px;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+}
